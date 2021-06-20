@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1",
+    "mocha": "^9.0.1",
+    "nyc": "^15.1.0",
+    "should": "^13.2.3",
+    "supertest": "^6.1.3",
+    "uuid": "8.3"
+  },
+  "name": "lea_backery",
+  "version": "1.0.0",
+  "description": "Backend server in node js for dummy bakery",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit --reporter spec",
+    "coverage": "nyc mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genius8901/Lea_Backery.git"
+  },
+  "author": "shakedey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genius8901/Lea_Backery/issues"
+  },
+  "homepage": "https://github.com/genius8901/Lea_Backery#readme"
+}
