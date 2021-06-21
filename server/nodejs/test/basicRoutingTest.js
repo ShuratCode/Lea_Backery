@@ -7,16 +7,11 @@ chai.use(chaiHttp);
 
 
 describe("Simple routing testing", function() {
-    it("/ should return empty JSON with 200 OK", function(done)
+    it("/ should return empty JSON with 200 OK", async () =>
     {
-        chai.request(app)
-        .get('/')
-        .end((err, res) => {
-            should.not.exist(err);
-            res.status.should.equal(200);
-            res.type.should.equal('application/json');
-            res.body.should.eql({});
-            done();
-        });
+        const response = await chai.request(app).get('/')
+        response.status.should.equal(200)
+        response.type.should.equal('application/json')
+        response.body.should.eql({})
     });
 });
