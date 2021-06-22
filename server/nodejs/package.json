@@ -25,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/genius8901/Lea_Backery/issues"
   },
-  "homepage": "https://github.com/genius8901/Lea_Backery#readme"
+  "homepage": "https://github.com/genius8901/Lea_Backery#readme",
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.1"
+  }
 }
