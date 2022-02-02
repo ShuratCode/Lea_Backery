@@ -1,29 +1,40 @@
 {
-  "dependencies": {
-    "chai": "^4.3.4",
-    "chai-http": "^4.3.0",
-    "express": "^4.17.1",
-    "mocha": "^9.0.1",
-    "nyc": "^15.1.0"
-  },
-  "name": "lea_backery",
-  "version": "1.0.0",
-  "description": "Backend server in node js for dummy bakery",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha --exit --reporter spec",
-    "coverage": "nyc mocha --exit",
-    "start": "node src/app.js",
-    "start:dev": "nodemon src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/genius8901/Lea_Backery.git"
-  },
-  "author": "shakedey",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/genius8901/Lea_Backery/issues"
-  },
-  "homepage": "https://github.com/genius8901/Lea_Backery#readme"
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "chai": "^4.3.4",
+        "chai-http": "^4.3.0",
+        "cookie-parser": "^1.4.5",
+        "csurf": "^1.11.0",
+        "express": "^4.17.1",
+        "helmet": "^4.6.0",
+        "mocha": "^9.0.1",
+        "nyc": "^15.1.0"
+    },
+    "name": "lea_backery",
+    "version": "1.0.0",
+    "description": "Backend server in node js for dummy bakery",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha --exit --reporter spec",
+        "coverage": "nyc mocha --exit",
+        "start": "node src/server.js",
+        "start:dev": "nodemon src/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/genius8901/Lea_Backery.git"
+    },
+    "author": "shakedey",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/genius8901/Lea_Backery/issues"
+    },
+    "homepage": "https://github.com/genius8901/Lea_Backery#readme",
+    "devDependencies": {
+        "eslint": "^7.29.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-mocha": "^9.0.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "prettier": "^2.3.1"
+    }
 }
