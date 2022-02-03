@@ -2,9 +2,6 @@ name: Snyk workflow for Node
 on:
   push:
     branches: [ "*" ]
-  pull_request:
-    branches: [ "master" ]
-
 defaults:
   run:
     working-directory: server/nodejs
@@ -24,4 +21,4 @@ jobs:
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v1
         with:
-          sarif_file: /home/runner/work/Lea_Backery/Lea_Backery/snyk.sarif
+          sarif_file: snyk.sarif
