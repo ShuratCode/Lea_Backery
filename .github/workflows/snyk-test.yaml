@@ -1,4 +1,8 @@
 name: Snyk workflow for Node
+branding:
+  icon: alert-traingle
+  color: yellow
+
 on: 
   push:
     branches: [ "*" ]
@@ -9,10 +13,10 @@ defaults:
   run:
     working-directory: server/nodejs
   
-  jobs:
+jobs:
     security:
       runs-on: ubuntu-latest
-      stepts:
+      steps:
         - uses: actions/checkout@master
         - name: Run Snyk to check for vulnerabilities
           uses: snyk/actions/node@master
