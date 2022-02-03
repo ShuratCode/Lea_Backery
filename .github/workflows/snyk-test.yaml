@@ -1,35 +1,27 @@
 name: Snyk workflow for Node
-branding:
-  icon: alert-traingle
-  color: yellow
-
-on: 
+on:
   push:
     branches: [ "*" ]
-  pull_request: 
+  pull_request:
     branches: [ "master" ]
-    
+
 defaults:
   run:
     working-directory: server/nodejs
-  
+
 jobs:
-    security:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@master
-        - name: Run Snyk to check for vulnerabilities
-          uses: snyk/actions/node@master
-          continue-on-error: true
-          env:
-            SNYT_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          with:
-            args: --sarif-file-output=synk.sarif
-        - name: Upload result to GitHub Code Scanning
-          uses: github/codeql-action/upload-sarif@v1
-          with:
-            sarif_file: snyk.sarif
-        
-    
-    
-      
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --sarif-file-output=synk.sarif
+      - name: Upload result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: snyk.sarif
